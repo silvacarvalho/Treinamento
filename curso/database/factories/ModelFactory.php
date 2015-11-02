@@ -19,3 +19,27 @@ $factory->define(App\User::class, function (Faker\Generator $faker) {
         'remember_token' => str_random(10),
     ];
 });
+
+
+$factory->define(App\Feira::class, function (Faker\Generator $faker) {
+    return [
+        'tipo' => $faker->sentence,
+        'local' => $faker->address,
+        'data' => $faker->dateTime,
+        'observacao' => $faker->sentence,
+    ];
+});
+
+$factory->define(App\Usuario::class, function (Faker\Generator $faker) {
+    return [
+        'nome' => $faker->name,
+        'email' => $faker->email,
+        'senha' => bcrypt(str_random(10)),
+        'cpf' => str_random(10),
+        'telefone' => $faker->phoneNumber,
+        'turma' => str_random(5),
+        'semestre' => str_random(12),
+        'curso' => $faker->country,
+        'nivel' => $faker->streetName,
+    ];
+});

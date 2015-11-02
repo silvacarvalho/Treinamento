@@ -16,6 +16,7 @@ class CreateUsuariosTable extends Migration
             $table->increments('id');
             $table->string('nome', 100);
             $table->string('email', 100);
+            $table->string('senha', 50);
             $table->bigInteger('cpf');
             $table->string('telefone', 20);
             $table->string('turma', 10);

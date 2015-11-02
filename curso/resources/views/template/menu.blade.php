@@ -17,11 +17,11 @@
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Administração <span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="#">Cadastrar Feira</a></li>
-                        <li><a href="#">Cadastrar Aluno</a></li>
+                        <li><a href="/feira/nova">Cadastrar Feira</a></li>
+                        <li><a href="/usuario/novo">Cadastrar Aluno</a></li>
                         <li role="separator" class="divider"></li>
-                        <li><a href="#">Consultar Feira</a></li>
-                        <li><a href="#">Consultar Aluno</a></li>
+                        <li><a href="/feira/listar">Consultar Feira</a></li>
+                        <li><a href="/usuario/listar">Consultar Aluno</a></li>
                     </ul>
                 </li>
             </ul>
@@ -31,13 +31,13 @@
                     <input type="text" name="usuario" class="form-control" placeholder="Usuário">
                     <input type="text" name="senha" class="form-control" placeholder="Senha">
                 </div>
-                <button type="submit" class="btn btn-default">Submit</button>
+                <button type="submit" class="btn btn-default">Logar</button>
             </form>
             <ul class="nav navbar-nav navbar-right {{isset($id) ? '' : 'hide'}}">
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Perfil <span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="#">Editar</a></li>
+                        <li><a href="/usuario/{{$id or '' }}">Editar</a></li>
                         <li role="separator" class="divider"></li>
                         <li><a href="#">Saír</a></li>
                     </ul>

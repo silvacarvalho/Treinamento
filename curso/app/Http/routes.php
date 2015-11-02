@@ -14,3 +14,21 @@
 Route::get('/', function () {
     return view('index');
 });
+
+
+
+/*
+ * Rotas para o controller FeiraController
+ */
+Route::get('feira', 'FeiraController@index');
+Route::get('feira/{id}', 'FeiraController@show');
+
+
+
+
+/*
+ * Rotas para o controller UsuarioController
+ */
+Route::get('usuario', 'UsuarioController@index');
+Route::get('usuario/novo', 'UsuarioController@novo');
+Route::get('usuario/{id}', 'UsuarioController@show');
