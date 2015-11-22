@@ -20,8 +20,12 @@ Route::get('/', function () {
 /*
  * Rotas para o controller FeiraController
  */
-Route::get('feira', 'FeiraController@index');
-Route::get('feira/{id}', 'FeiraController@show');
+Route::get('/feira/listar', 'FeiraController@index');
+Route::get('/feira/nova', 'FeiraController@action_nova');
+Route::post('/feira/criar', 'FeiraController@create');
+Route::get('/feira/ver/{id}', 'FeiraController@show');
+Route::any('/feira/update/{id}', 'FeiraController@update');
+Route::any('/feira/manager/{id}', 'FeiraController@manager');
 
 
 
@@ -30,5 +34,5 @@ Route::get('feira/{id}', 'FeiraController@show');
  * Rotas para o controller UsuarioController
  */
 Route::get('usuario', 'UsuarioController@index');
-Route::get('usuario/novo', 'UsuarioController@novo');
+Route::get('usuario/novo', 'UsuarioController@action_novo');
 Route::get('usuario/{id}', 'UsuarioController@show');
