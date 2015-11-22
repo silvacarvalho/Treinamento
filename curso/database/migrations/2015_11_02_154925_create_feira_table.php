@@ -15,6 +15,7 @@ class CreateFeirasTable extends Migration
         Schema::create('feira', function (Blueprint $table) {
             $table->increments('id');
             $table->string('tipo', 100);
+            $table->string('tema', 100);
             $table->string('local', 100);
             $table->date('data') ;
             $table->string('observacao', 200);
@@ -29,6 +30,6 @@ class CreateFeirasTable extends Migration
      */
     public function down()
     {
-        Schema::drop('feiras');
+        Schema::drop('feira');
     }
 }
