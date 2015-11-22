@@ -67,7 +67,7 @@ class UsuarioController extends Controller
      * Renderiza view NOVO Usuário.
      */
     
-    public function novo()
+    public function action_novo()
     {
         return view('usuario.novo');
     }
