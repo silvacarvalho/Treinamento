@@ -25,7 +25,7 @@
                     </ul>
                 </li>
             </ul>
-            <?php $id = 3;?>
+            <?php // $id = 3;?>
             <form class="navbar-form navbar-right {{isset($id) ? 'hide' : '' }}" role="search">
                 <div class="form-group">
                     <input type="text" name="usuario" class="form-control" placeholder="Usuário">
